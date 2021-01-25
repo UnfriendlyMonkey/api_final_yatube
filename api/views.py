@@ -64,8 +64,6 @@ class FollowViewSet(MixinViewSet):
 
     def get_queryset(self):
         queryset = Follow.objects.filter(following=self.request.user)
-        print('mark')
-        print(queryset)
         return queryset
 
     def perform_create(self, serializer):
